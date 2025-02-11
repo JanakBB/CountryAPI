@@ -14,7 +14,7 @@ const App = () => {
         <SearchBar setQuery={setQuery}/>
         <SearchSelect />
       </div>
-      {query === "postpone" ? "" : <CountriesList query={query}/>}
+      {<CountriesList query={query}/>}
     </>
   );
 };

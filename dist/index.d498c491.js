@@ -18609,12 +18609,12 @@ const App = ()=>{
                 lineNumber: 13,
                 columnNumber: 7
             }, undefined),
-            query === "postpone" ? "" : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _countriesListDefault.default), {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _countriesListDefault.default), {
                 query: query
             }, void 0, false, {
                 fileName: "App.jsx",
                 lineNumber: 17,
-                columnNumber: 36
+                columnNumber: 8
             }, undefined)
         ]
     }, void 0, true);
@@ -19021,12 +19021,6 @@ function CountriesList({ query }) {
     const [countriesList, setCountriesList] = (0, _react.useState)([]);
     (0, _react.useEffect)(()=>{
         fetch("https://restcountries.com/v3.1/all").then((res)=>res.json()).then((data)=>setCountriesList(data));
-    // const Interval = setInterval(() => {
-    //   console.log("Close the app")
-    // }, [1000])
-    // return(() => {
-    //   clearTimeout(Interval)
-    // })
     }, []);
     const countries = countriesList.filter((country)=>country.name.common.toLowerCase().includes(query));
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
@@ -19036,7 +19030,7 @@ function CountriesList({ query }) {
                 children: "Clear All Countries Data"
             }, void 0, false, {
                 fileName: "components/CountriesList.jsx",
-                lineNumber: 27,
+                lineNumber: 19,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -19049,12 +19043,12 @@ function CountriesList({ query }) {
                         region: country.region
                     }, i, false, {
                         fileName: "components/CountriesList.jsx",
-                        lineNumber: 30,
+                        lineNumber: 22,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "components/CountriesList.jsx",
-                lineNumber: 28,
+                lineNumber: 20,
                 columnNumber: 7
             }, this)
         ]
