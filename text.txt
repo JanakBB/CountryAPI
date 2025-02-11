@@ -1,0 +1,12 @@
+mkdir [directory name] - create new folder 
+rmdir [directory name] - remover created folder 
+
+git rm -r one-of-the-directories // This deletes from filesystem
+git commit . -m "Remove duplicated directory"
+git push origin <your-git-branch> (typically 'master', but not always)
+
+git rm -r --cached FolderName
+git commit -m "Removed folder from repository"
+git push origin master
+
+git rm -rf <directory_name> - It will force delete the directory.
