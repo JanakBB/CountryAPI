@@ -1,13 +1,15 @@
+import { Link } from "react-router";
+
 export default function CountryCard({
   name,
   flags,
   population,
   region,
-  capital
+  capital,
+  data,
 }) {
-  console.log(name, flags, population, region, capital)
   return (
-    <a  className="country-card" href="/country.html?name=South Georgia">
+    <Link className="country-card" to={`/${name}`} state={data}>
       <img src={flags.svg} alt={name.common + "Flags"} />
       <div className="card-text">
         <h3 className="card-title">{name.common}</h3>
@@ -24,6 +26,6 @@ export default function CountryCard({
           {capital?.[0]}
         </p>
       </div>
-    </a>
+    </Link>
   );
 }
