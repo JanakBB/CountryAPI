@@ -27660,22 +27660,37 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _reactRouter = require("react-router");
 var _header = require("./components/Header");
 var _headerDefault = parcelHelpers.interopDefault(_header);
+var _react = require("react");
+var _s = $RefreshSig$();
 const App = ()=>{
+    _s();
+    const [isDark, setIsDark] = (0, _react.useState)(JSON.parse(localStorage.getItem("mode")));
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {
+                theme: [
+                    isDark,
+                    setIsDark
+                ]
+            }, void 0, false, {
                 fileName: "App.jsx",
-                lineNumber: 8,
+                lineNumber: 12,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Outlet), {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Outlet), {
+                context: [
+                    isDark,
+                    setIsDark
+                ]
+            }, void 0, false, {
                 fileName: "App.jsx",
-                lineNumber: 9,
+                lineNumber: 13,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true);
 };
+_s(App, "JnCYe7PpxcOVhdkRYLCNJ04GvlA=");
 _c = App;
 exports.default = App;
 var _c;
@@ -27686,7 +27701,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-router":"dXVwI","./components/Header":"6nmoh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6nmoh":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","react-router":"dXVwI","./components/Header":"6nmoh","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6nmoh":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$6433 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27696,15 +27711,10 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _s = $RefreshSig$();
-const Header = ()=>{
-    _s();
-    const [isDark, setIsDark] = (0, _react.useState)(JSON.parse(localStorage.getItem("mode")));
-    if (isDark) document.body.classList.add("dark");
-    else document.body.classList.remove("dark");
+const Header = ({ theme })=>{
+    const [isDark, setIsDark] = theme;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("header", {
-        className: "header-container",
+        className: `header-container ${isDark ? "dark" : ""}`,
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: "header-content",
             children: [
@@ -27715,12 +27725,12 @@ const Header = ()=>{
                         children: "Where in the world?"
                     }, void 0, false, {
                         fileName: "components/Header.jsx",
-                        lineNumber: 15,
+                        lineNumber: 8,
                         columnNumber: 11
                     }, undefined)
                 }, void 0, false, {
                     fileName: "components/Header.jsx",
-                    lineNumber: 14,
+                    lineNumber: 7,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -27734,7 +27744,7 @@ const Header = ()=>{
                             className: `fa-solid fa-${isDark ? "sun" : "moon"}`
                         }, void 0, false, {
                             fileName: "components/Header.jsx",
-                            lineNumber: 22,
+                            lineNumber: 15,
                             columnNumber: 11
                         }, undefined),
                         "\xa0\xa0",
@@ -27743,22 +27753,21 @@ const Header = ()=>{
                     ]
                 }, void 0, true, {
                     fileName: "components/Header.jsx",
-                    lineNumber: 17,
+                    lineNumber: 10,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "components/Header.jsx",
-            lineNumber: 13,
+            lineNumber: 6,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "components/Header.jsx",
-        lineNumber: 12,
+        lineNumber: 5,
         columnNumber: 5
     }, undefined);
 };
-_s(Header, "JnCYe7PpxcOVhdkRYLCNJ04GvlA=");
 _c = Header;
 exports.default = Header;
 var _c;
@@ -27769,7 +27778,7 @@ $RefreshReg$(_c, "Header");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"km3Ru":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"km3Ru":[function(require,module,exports,__globalThis) {
 "use strict";
 var Refresh = require("7422ead32dcc1e6b");
 var { version } = require("630b62916b1ae0e7");
@@ -27965,11 +27974,14 @@ var _selectMenuDefault = parcelHelpers.interopDefault(_selectMenu);
 var _countriesList = require("./CountriesList");
 var _countriesListDefault = parcelHelpers.interopDefault(_countriesList);
 var _react = require("react");
+var _reactRouter = require("react-router");
 var _s = $RefreshSig$();
 const Home = ()=>{
     _s();
     const [query, setQuery] = (0, _react.useState)("");
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+    const [isDark] = (0, _reactRouter.useOutletContext)();
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("main", {
+        className: `header-container ${isDark ? "dark" : ""}`,
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "search-filter-container",
@@ -27978,31 +27990,39 @@ const Home = ()=>{
                         setQuery: setQuery
                     }, void 0, false, {
                         fileName: "components/Home.jsx",
-                        lineNumber: 12,
+                        lineNumber: 14,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _selectMenuDefault.default), {}, void 0, false, {
                         fileName: "components/Home.jsx",
-                        lineNumber: 13,
+                        lineNumber: 15,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "components/Home.jsx",
-                lineNumber: 11,
+                lineNumber: 13,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _countriesListDefault.default), {
                 query: query
             }, void 0, false, {
                 fileName: "components/Home.jsx",
-                lineNumber: 15,
+                lineNumber: 17,
                 columnNumber: 8
             }, undefined)
         ]
-    }, void 0, true);
+    }, void 0, true, {
+        fileName: "components/Home.jsx",
+        lineNumber: 12,
+        columnNumber: 5
+    }, undefined);
 };
-_s(Home, "HYX2QbDDdTtlu7GfoQbAPZOIM6k=");
+_s(Home, "yvmNRX/vNDN+y+CkXMHFHMvI7uU=", false, function() {
+    return [
+        (0, _reactRouter.useOutletContext)
+    ];
+});
 _c = Home;
 exports.default = Home;
 var _c;
@@ -28013,7 +28033,7 @@ $RefreshReg$(_c, "Home");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./SearchBar":"4HJPW","../App.css":"7g3a6","./SelectMenu":"hfvcB","./CountriesList":"bJsk6","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4HJPW":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","./SearchBar":"4HJPW","../App.css":"7g3a6","./SelectMenu":"hfvcB","./CountriesList":"bJsk6","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router":"dXVwI"}],"4HJPW":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$e8d4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
