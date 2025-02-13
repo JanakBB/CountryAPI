@@ -9,7 +9,7 @@ const Home = () => {
   const [query, setQuery] = useState("");
   const [isDark] = useOutletContext()
   return (
-    <main className={`header-container ${isDark ? "dark" : ""}`}>
+    <main className={`main-container ${isDark ? "dark" : ""}`}>
       <div className="search-filter-container">
         <SearchBar setQuery={setQuery} />
         <SearchSelect />
