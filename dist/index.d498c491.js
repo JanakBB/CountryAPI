@@ -27661,11 +27661,13 @@ var _reactRouter = require("react-router");
 var _header = require("./components/Header");
 var _headerDefault = parcelHelpers.interopDefault(_header);
 var _react = require("react");
+var _themeContext = require("./Contexts/ThemeContext");
 var _s = $RefreshSig$();
 const App = ()=>{
     _s();
     const [isDark, setIsDark] = (0, _react.useState)(JSON.parse(localStorage.getItem("mode")));
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _themeContext.ThemeContext).Provider, {
+        value: "Hello",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {
                 theme: [
@@ -27674,7 +27676,7 @@ const App = ()=>{
                 ]
             }, void 0, false, {
                 fileName: "App.jsx",
-                lineNumber: 12,
+                lineNumber: 13,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Outlet), {
@@ -27684,11 +27686,15 @@ const App = ()=>{
                 ]
             }, void 0, false, {
                 fileName: "App.jsx",
-                lineNumber: 13,
+                lineNumber: 14,
                 columnNumber: 7
             }, undefined)
         ]
-    }, void 0, true);
+    }, void 0, true, {
+        fileName: "App.jsx",
+        lineNumber: 12,
+        columnNumber: 5
+    }, undefined);
 };
 _s(App, "JnCYe7PpxcOVhdkRYLCNJ04GvlA=");
 _c = App;
@@ -27701,7 +27707,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-router":"dXVwI","./components/Header":"6nmoh","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6nmoh":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","react-router":"dXVwI","./components/Header":"6nmoh","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./Contexts/ThemeContext":"fq2YL"}],"6nmoh":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$6433 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27711,8 +27717,12 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const Header = ({ theme })=>{
-    const [isDark, setIsDark] = theme;
+var _react = require("react");
+var _themeContext = require("../Contexts/ThemeContext");
+var _s = $RefreshSig$();
+const Header = ()=>{
+    _s();
+    const [isDark, setIsDark] = (0, _react.useContext)((0, _themeContext.ThemeContext));
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("header", {
         className: `header-container ${isDark ? "dark" : ""}`,
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27725,12 +27735,12 @@ const Header = ({ theme })=>{
                         children: "Where in the world?"
                     }, void 0, false, {
                         fileName: "components/Header.jsx",
-                        lineNumber: 8,
+                        lineNumber: 11,
                         columnNumber: 11
                     }, undefined)
                 }, void 0, false, {
                     fileName: "components/Header.jsx",
-                    lineNumber: 7,
+                    lineNumber: 10,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -27744,7 +27754,7 @@ const Header = ({ theme })=>{
                             className: `fa-solid fa-${isDark ? "sun" : "moon"}`
                         }, void 0, false, {
                             fileName: "components/Header.jsx",
-                            lineNumber: 15,
+                            lineNumber: 18,
                             columnNumber: 11
                         }, undefined),
                         "\xa0\xa0",
@@ -27753,21 +27763,22 @@ const Header = ({ theme })=>{
                     ]
                 }, void 0, true, {
                     fileName: "components/Header.jsx",
-                    lineNumber: 10,
+                    lineNumber: 13,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "components/Header.jsx",
-            lineNumber: 6,
+            lineNumber: 9,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "components/Header.jsx",
-        lineNumber: 5,
+        lineNumber: 8,
         columnNumber: 5
     }, undefined);
 };
+_s(Header, "f9iH0Quh/oW1YGsqKgNKCKTuCE8=");
 _c = Header;
 exports.default = Header;
 var _c;
@@ -27778,7 +27789,7 @@ $RefreshReg$(_c, "Header");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"km3Ru":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","../Contexts/ThemeContext":"fq2YL"}],"km3Ru":[function(require,module,exports,__globalThis) {
 "use strict";
 var Refresh = require("7422ead32dcc1e6b");
 var { version } = require("630b62916b1ae0e7");
@@ -27923,7 +27934,25 @@ function registerExportsForReactRefresh(module1) {
 },{"7422ead32dcc1e6b":"786KC","630b62916b1ae0e7":"4SQxb"}],"4SQxb":[function(require,module,exports,__globalThis) {
 module.exports = JSON.parse("{\"name\":\"react-refresh\",\"description\":\"React is a JavaScript library for building user interfaces.\",\"keywords\":[\"react\"],\"version\":\"0.14.2\",\"homepage\":\"https://reactjs.org/\",\"bugs\":\"https://github.com/facebook/react/issues\",\"license\":\"MIT\",\"files\":[\"LICENSE\",\"README.md\",\"babel.js\",\"runtime.js\",\"cjs/\",\"umd/\"],\"main\":\"runtime.js\",\"exports\":{\".\":\"./runtime.js\",\"./runtime\":\"./runtime.js\",\"./babel\":\"./babel.js\",\"./package.json\":\"./package.json\"},\"repository\":{\"type\":\"git\",\"url\":\"https://github.com/facebook/react.git\",\"directory\":\"packages/react\"},\"engines\":{\"node\":\">=0.10.0\"},\"devDependencies\":{\"react-16-8\":\"npm:react@16.8.0\",\"react-dom-16-8\":\"npm:react-dom@16.8.0\",\"scheduler-0-13\":\"npm:scheduler@0.13.0\"}}");
 
-},{}],"iRdEB":[function(require,module,exports,__globalThis) {
+},{}],"fq2YL":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$e24c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$e24c.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "ThemeContext", ()=>ThemeContext);
+var _react = require("react");
+const ThemeContext = /*#__PURE__*/ (0, _react.createContext)();
+
+  $parcel$ReactRefreshHelpers$e24c.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iRdEB":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$1e0c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27974,12 +28003,12 @@ var _selectMenuDefault = parcelHelpers.interopDefault(_selectMenu);
 var _countriesList = require("./CountriesList");
 var _countriesListDefault = parcelHelpers.interopDefault(_countriesList);
 var _react = require("react");
-var _reactRouter = require("react-router");
+var _themeContext = require("../Contexts/ThemeContext");
 var _s = $RefreshSig$();
 const Home = ()=>{
     _s();
     const [query, setQuery] = (0, _react.useState)("");
-    const [isDark] = (0, _reactRouter.useOutletContext)();
+    const [isDark] = (0, _react.useContext)((0, _themeContext.ThemeContext));
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("main", {
         className: `main-container ${isDark ? "dark" : ""}`,
         children: [
@@ -28018,11 +28047,7 @@ const Home = ()=>{
         columnNumber: 5
     }, undefined);
 };
-_s(Home, "yvmNRX/vNDN+y+CkXMHFHMvI7uU=", false, function() {
-    return [
-        (0, _reactRouter.useOutletContext)
-    ];
-});
+_s(Home, "PfMJXTtnKOkrjY8PrhiIiagMs3w=");
 _c = Home;
 exports.default = Home;
 var _c;
@@ -28033,7 +28058,7 @@ $RefreshReg$(_c, "Home");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./SearchBar":"4HJPW","../App.css":"7g3a6","./SelectMenu":"hfvcB","./CountriesList":"bJsk6","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router":"dXVwI"}],"4HJPW":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","./SearchBar":"4HJPW","../App.css":"7g3a6","./SelectMenu":"hfvcB","./CountriesList":"bJsk6","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../Contexts/ThemeContext":"fq2YL"}],"4HJPW":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$e8d4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -28422,16 +28447,16 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _countryDetailCss = require("./CountryDetail.css");
 var _reactRouter = require("react-router");
+var _themeContext = require("../Contexts/ThemeContext");
 var _s = $RefreshSig$();
 function CountryDetail() {
     _s();
     const params = (0, _reactRouter.useParams)();
     const countryName = params.country;
     const { state } = (0, _reactRouter.useLocation)();
-    console.log(state);
     const [countryData, setCountryData] = (0, _react.useState)(null);
     const [notFound, setNotFound] = (0, _react.useState)(false);
-    const [isDark] = (0, _reactRouter.useOutletContext)();
+    const [isDark] = (0, _react.useContext)((0, _themeContext.ThemeContext));
     function updateCountryData(data) {
         setCountryData({
             name: data.name.common,
@@ -28829,11 +28854,10 @@ function CountryDetail() {
         columnNumber: 5
     }, this);
 }
-_s(CountryDetail, "J2y+2KoUyz1nWndkQL9wcJCiLZ4=", false, function() {
+_s(CountryDetail, "mP4bkzaQ8MtyLNa9aYZbojP/SsE=", false, function() {
     return [
         (0, _reactRouter.useParams),
-        (0, _reactRouter.useLocation),
-        (0, _reactRouter.useOutletContext)
+        (0, _reactRouter.useLocation)
     ];
 });
 _c = CountryDetail;
@@ -28845,6 +28869,6 @@ $RefreshReg$(_c, "CountryDetail");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./CountryDetail.css":"jpfWC","react-router":"dXVwI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jpfWC":[function() {},{}]},["aQL8O","5faqK","g9R30"], "g9R30", "parcelRequire94c2")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./CountryDetail.css":"jpfWC","react-router":"dXVwI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../Contexts/ThemeContext":"fq2YL"}],"jpfWC":[function() {},{}]},["aQL8O","5faqK","g9R30"], "g9R30", "parcelRequire94c2")
 
 //# sourceMappingURL=index.d498c491.js.map
