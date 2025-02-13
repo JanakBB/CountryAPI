@@ -7,7 +7,7 @@ import { ThemeContext } from "../Contexts/ThemeContext";
 
 const Home = () => {
   const [query, setQuery] = useState("");
-  const [isDark] = useContext(ThemeContext)
+  const [isDark] = useContext(ThemeContext);
   return (
     <main className={`main-container ${isDark ? "dark" : ""}`}>
       <div className="search-filter-container">
