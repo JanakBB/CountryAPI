@@ -1,40 +1,46 @@
-import { useEffect, useState } from "react";
-import CountryCard from "./CountryCard";
-import CountriesListShimmer from "./CountriesListShimmer";
+import React, { useEffect, useState } from 'react'
+// import countriesData from '../countriesData'
+import CountryCard from './CountryCard'
+import CountriesListShimmer from './CountriesListShimmer'
 
 export default function CountriesList({ query }) {
-  const [countriesList, setCountriesList] = useState([]);
+  const [countriesData, setCountriesData] = useState([])
+
+  // const [filteredData, setQuery] = useFilter(data, () => '')
 
   useEffect(() => {
-    fetch("https://restcountries.com/v3.1/all")
+    fetch('https://restcountries.com/v3.1/all')
       .then((res) => res.json())
-      .then((data) => setCountriesList(data));
-  }, []);
+      .then((data) => {
+        setCountriesData(data)
+      })
+  }, [])
 
-  const countries = countriesList.filter((country) =>
-    country.name.common.toLowerCase().includes(query)
-  );
+  if (!countriesData.length) {
+    return <CountriesListShimmer />
+  }
+
   return (
     <>
-      {!countriesList.length ? (
-        <CountriesListShimmer />
-      ) : (
-        <div className="countries-container">
-          {countries.map((country, i) => {
+      <div className="countries-container">
+        {countriesData
+          .filter((country) =>
+            country.name.common.toLowerCase().includes(query)
+          )
+          .map((country) => {
             return (
               <CountryCard
+                key={country.name.common}
                 name={country.name.common}
-                flags={country.flags}
+                flag={country.flags.svg}
                 population={country.population}
-                capital={country.capital}
-                key={i}
                 region={country.region}
+                capital={country.capital?.[0]}
                 data={country}
               />
-            );
+            )
           })}
-        </div>
-      )}
+      </div>
     </>
-  );
+  )
 }

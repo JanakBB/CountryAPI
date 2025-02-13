@@ -64,6 +64,17 @@
     font-size: 14px;
 }
 
+.flag-container {
+    height: 160px;
+    overflow: hidden;
+}
+
+.flag-container img {
+    height: 100%;
+    object-fit: cover;
+}
+
+
 @media(max-width: 940px) {
     .country-details {
         flex-direction: column;

@@ -2,15 +2,14 @@ import SearchBar from "./SearchBar";
 import "../App.css";
 import SearchSelect from "./SelectMenu";
 import CountriesList from "./CountriesList";
-import { useContext, useEffect, useState } from "react";
-import { ThemeContext } from "../Contexts/ThemeContext";
+import {useState } from "react";
 import useWindowSize from "../hooks/useWindowSize";
+import { useTheme } from "../hooks/useTheme";
 
 const Home = () => {
   const [query, setQuery] = useState("");
-  const [isDark] = useContext(ThemeContext);
-  const windowSize = useWindowSize()
-
+  const [isDark] = useTheme()
+  const windowSize = useWindowSize();
 
   return (
     <main className={`main-container ${isDark ? "dark" : ""}`}>
@@ -18,7 +17,9 @@ const Home = () => {
         <SearchBar setQuery={setQuery} />
         <SearchSelect />
       </div>
-      <h1 style={{textAlign: "center"}}>{windowSize.width} x {windowSize.height}</h1>
+      <h1 style={{ textAlign: "center" }}>
+        {windowSize.width} x {windowSize.height}
+      </h1>
       {<CountriesList query={query} />}
     </main>
   );

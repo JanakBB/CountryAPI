@@ -1,8 +1,7 @@
-import { useContext } from "react";
-import { ThemeContext } from "../Contexts/ThemeContext";
+import { useTheme } from "../hooks/useTheme";
 
 const Header = () => {
-  const [isDark, setIsDark] = useContext(ThemeContext)
+  const [isDark, setIsDark] = useTheme();
 
   return (
     <header className={`header-container ${isDark ? "dark" : ""}`}>
@@ -10,11 +9,13 @@ const Header = () => {
         <h2 className="title">
           <a href="/">Where in the world?</a>
         </h2>
-        <p className="theme-changer" onClick={() => {
-          setIsDark(!isDark)
-          localStorage.setItem("mode", !isDark)
-        }
-        }>
+        <p
+          className="theme-changer"
+          onClick={() => {
+            setIsDark(!isDark);
+            localStorage.setItem("mode", !isDark);
+          }}
+        >
           <i className={`fa-solid fa-${isDark ? "sun" : "moon"}`} />
           &nbsp;&nbsp;{isDark ? "Light" : "Dark"} Mode
         </p>
