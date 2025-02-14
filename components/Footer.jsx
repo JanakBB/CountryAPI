@@ -29,7 +29,6 @@ const Footer = () => {
           </div>
           <div className="footer-section contact">
             <h2>Contact Us</h2>
-            <br />
             <i class="fa-solid fa-phone phone"></i>
             +977-9868747299
             <br />

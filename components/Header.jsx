@@ -14,7 +14,6 @@ const Header = () => {
             <h2 className="title">
               <img
                 src={ProfilePicture}
-                style={{ width: "50px", marginInlineEnd: "20px" }}
                 alt=""
               />
               <a href="/">CodeBookPro world</a>
