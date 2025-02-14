@@ -3,7 +3,8 @@ import React, { useEffect, useState } from "react";
 import "./CountryDetail.css";
 import { Link, useLocation, useParams } from "react-router";
 import { useTheme } from "../hooks/useTheme";
-import CountryDetailShimmer from "./CountriesListShimmer";
+import CountryDetailShimmer from "./CountryDetailShimmer";
+
 
 export default function CountryDetail() {
   const [isDark] = useTheme();
