@@ -1,0 +1,22 @@
+.phone {
+    margin-inline-end: 5px;
+  }
+
+ .social-media {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 150px;
+  }
+  .social-media a {
+    font-size: 20px;
+    background-color: blue;
+    padding-inline: 5px;
+    padding-top: 2px;
+    border-radius: 10px;
+  }
+  
+  .social-media a:hover {
+    color: blue;
+    background-color: white;
+  }

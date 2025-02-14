@@ -1,4 +1,7 @@
 import { useTheme } from "../hooks/useTheme";
+import ProfilePicture from "../images/Group 64.png";
+import "./Footer.css";
+import SocialMedia from "./SocialMedia";
 
 const Header = () => {
   const [isDark, setIsDark] = useTheme();
@@ -6,9 +9,19 @@ const Header = () => {
   return (
     <header className={`header-container ${isDark ? "dark" : ""}`}>
       <div className="header-content">
-        <h2 className="title">
-          <a href="/">Where in the world?</a>
-        </h2>
+        <div className="header-social-media">
+          <div>
+            <h2 className="title">
+              <img
+                src={ProfilePicture}
+                style={{ width: "50px", marginInlineEnd: "20px" }}
+                alt=""
+              />
+              <a href="/">CodeBookPro world</a>
+            </h2>
+          </div>
+          <SocialMedia />
+        </div>
         <p
           className="theme-changer"
           onClick={() => {

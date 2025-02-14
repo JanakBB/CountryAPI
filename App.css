@@ -10,13 +10,13 @@ body {
     font-family: Nunito, sans-serif;
 }
 
-main, header {
+main, header, footer {
     
     background-color: var(--background-color);
     color: var(--text-color);
 }
 
-main.dark, header.dark {
+main.dark, header.dark, footer.dark {
     --background-color: hsl(207, 26%, 17%); 
     --text-color: white;
     --elements-color: hsl(209, 23%, 22%);
@@ -52,6 +52,10 @@ a {
 
 .title {
     font-weight: 800;
+    width: auto;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .theme-changer {
@@ -147,6 +151,11 @@ a {
     color: var(--text-color);
 }
 
+.header-social-media {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
 @media(max-width: 768px) {
     .countries-container {
         justify-content: center;

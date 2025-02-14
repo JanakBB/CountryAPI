@@ -3,7 +3,6 @@ import "../App.css";
 import SearchSelect from "./SelectMenu";
 import CountriesList from "./CountriesList";
 import { useState } from "react";
-import useWindowSize from "../hooks/useWindowSize";
 import { useTheme } from "../hooks/useTheme";
 
 const Home = () => {

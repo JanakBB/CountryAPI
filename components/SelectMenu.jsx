@@ -4,7 +4,7 @@ export default function SearchSelect({ setQuery }) {
       className="filter-by-region"
       onChange={(e) => setQuery(e.target.value.toLowerCase())}
     >
-      <option value="">Filter by Region</option>
+      <option hidden>Filter by Region</option>
       <option value="Africa">Africa</option>
       <option value="Americas">Americas</option>
       <option value="Asia">Asia</option>
