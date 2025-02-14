@@ -9,7 +9,6 @@ import { useTheme } from "../hooks/useTheme";
 const Home = () => {
   const [query, setQuery] = useState("");
   const [isDark] = useTheme();
-  const windowSize = useWindowSize();
 
   return (
     <main className={`main-container ${isDark ? "dark" : ""}`}>
@@ -17,9 +16,6 @@ const Home = () => {
         <SearchBar setQuery={setQuery} />
         <SearchSelect setQuery={setQuery} />
       </div>
-      <h1 style={{ textAlign: "center" }}>Window Size: 
-        {windowSize.width} x {windowSize.height}
-      </h1>
       {<CountriesList query={query} />}
     </main>
   );
